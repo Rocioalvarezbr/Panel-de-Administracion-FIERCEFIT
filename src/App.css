@@ -1,6 +1,61 @@
-.header{
-  background-color: black;
+* {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
 }
-.logo img{
-  width: 90px;
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+.logo img {
+  width: 100px;
+}
+
+.Header h2 {
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.Header {
+  width: 100%;
+}
+
+.title {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.SideMenu {
+  background-color: #212529;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+  border: none;
+  width: 280px;
+}
+.side-menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu-list li {
+  padding: 10px 0;
 }
