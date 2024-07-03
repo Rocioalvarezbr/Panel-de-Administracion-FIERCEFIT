@@ -57,5 +57,9 @@
 }
 
 .side-menu-list li {
-  padding: 10px 0;
+  padding: 10px 10px;
+}
+.side-menu-list li:hover {
+  background-color: rgba(128, 128, 128, 0.466);
+  border-radius: 10px;
 }
