@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function SideMenu() {
   return (
@@ -7,9 +8,17 @@ function SideMenu() {
         <li>
           <i class="fa-solid fa-house"></i> Dashboard
         </li>
-        <li><i class="fa-solid fa-bag-shopping"></i> Productos</li>
-        <li><i class="fa-solid fa-user"></i> Usuarios</li>
-        <li><i class="fa-solid fa-cart-shopping"></i> Ordenes</li>
+        <Link to="/productos">
+          <li>
+            <i class="fa-solid fa-bag-shopping"></i> Productos
+          </li>
+        </Link>
+        <li>
+          <i class="fa-solid fa-user"></i> Usuarios
+        </li>
+        <li>
+          <i class="fa-solid fa-cart-shopping"></i> Ordenes
+        </li>
       </ul>
     </div>
   );

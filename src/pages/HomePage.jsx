@@ -1,18 +1,14 @@
 import React from "react";
 import Header from "../components/Header";
-import SideMenu from "../components/SideMenu"
+import SideMenu from "../components/SideMenu";
 
 function Home() {
   return (
-    <div>
+    <div className="main-container">
       <Header />
-      <div className="Container">
-        <div className="row">
-          <div className="col-4">
-          <SideMenu />
-          </div>
-          <div className="col-8"></div>
-        </div>
+      <div className="content-container">
+        <SideMenu />
+        <div className="home-content"></div>
       </div>
     </div>
   );
