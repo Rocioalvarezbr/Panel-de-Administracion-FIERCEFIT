@@ -13,7 +13,7 @@ html, body, .main-container {
 .main-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .Header {
@@ -22,6 +22,7 @@ html, body, .main-container {
 
 .content-container {
   display: flex;
+  flex-grow: 1;
   height: 100%;
 }
 
@@ -29,7 +30,6 @@ html, body, .main-container {
   background-color: #212529;
   color: white;
   width: 280px;
-  height: 100%;
   padding: 20px;
   border: none;
 }
@@ -44,15 +44,22 @@ html, body, .main-container {
   padding: 10px 10px;
 }
 
-.side-menu-list li:hover {
+.side-menu-list li:hover,
+.side-menu-list .active {
   background-color: rgba(128, 128, 128, 0.466);
   border-radius: 10px;
+}
+
+.side-menu-list a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .products-content, .home-content {
   background-color: rgb(207, 206, 206);
   flex-grow: 1;
-  height: 100%;
+  min-height: 100%;
 }
 
 .logo img {
@@ -86,9 +93,15 @@ html, body, .main-container {
   left: 50%;
   transform: translateX(-50%);
 }
-#agregar-productos{
+
+#agregar-productos {
   background-color: #daff03;
   border: none;
   color: black;
   font-weight: bold;
+}
+
+.TablaProductos {
+  margin: 30px;
+  width: 95%;
 }

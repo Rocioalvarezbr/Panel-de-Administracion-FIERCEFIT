@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import SideMenu from "../components/SideMenu";
+import Table from "react-bootstrap/Table";
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);
@@ -25,8 +26,8 @@ const ProductsPage = () => {
       <div className="content-container">
         <SideMenu />
         <div id="products-container" className="products-content">
-          <div className="d-flex justify-content-between pt-3">
-            <h2>Productos</h2>
+          <div className="d-flex justify-content-between pt-3 px-4">
+            <h2 className="fw-bold">Productos</h2>
             <a
               id="agregar-productos"
               className="btn btn-primary"
@@ -36,23 +37,26 @@ const ProductsPage = () => {
               Agregar producto
             </a>
           </div>
-          <div className="product-list">
-            {products.map((product) => (
-              <div key={product.id} className="product-item">
-                <ul class="list-group list-group-horizontal">
-                  <li>
-                    <h3>{product.name}</h3>
-                  </li>
-                  <li>
-                    <p>Precio: {product.price}</p>
-                  </li>
-                  <li>
-                    <p>Stock: {product.stock}</p>
-                  </li>
-                </ul>
-              </div>
-            ))}
-          </div>
+          <Table striped bordered hover className="TablaProductos">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {products.map((product) => (
+                <tr key={product.id}>
+                  <td>{product.name}</td>
+                  <td>${product.price}</td>
+                  <td>{product.stock}</td>
+                  <td><a href="#">Edit</a></td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
         </div>
       </div>
     </div>

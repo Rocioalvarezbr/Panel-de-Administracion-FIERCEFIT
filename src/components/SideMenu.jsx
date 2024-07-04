@@ -1,23 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function SideMenu() {
   return (
     <div className="SideMenu">
       <ul className="side-menu-list">
         <li>
-          <i class="fa-solid fa-house"></i> Dashboard
-        </li>
-        <Link to="/productos">
-          <li>
-            <i class="fa-solid fa-bag-shopping"></i> Productos
-          </li>
-        </Link>
-        <li>
-          <i class="fa-solid fa-user"></i> Usuarios
+          <NavLink exact to="/" activeClassName="active">
+            <i className="fa-solid fa-house"></i> Dashboard
+          </NavLink>
         </li>
         <li>
-          <i class="fa-solid fa-cart-shopping"></i> Ordenes
+          <NavLink to="/productos" activeClassName="active">
+            <i className="fa-solid fa-bag-shopping"></i> Productos
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/usuarios" activeClassName="active">
+            <i className="fa-solid fa-user"></i> Usuarios
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/ordenes" activeClassName="active">
+            <i className="fa-solid fa-cart-shopping"></i> Ordenes
+          </NavLink>
         </li>
       </ul>
     </div>
