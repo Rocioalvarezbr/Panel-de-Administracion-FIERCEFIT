@@ -1,25 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Header from "../components/Header";
 import SideMenu from "../components/SideMenu";
-import Table from "react-bootstrap/Table";
+import ProductTable from "../components/ProductTable";
+import Footer from "../components/Footer";
 
-const ProductsPage = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const getProducts = async () => {
-      try {
-        const response = await fetch(`http://localhost:3000/products/`);
-        const data = await response.json();
-        setProducts(data);
-      } catch (error) {
-        console.error("Error al traer los productos:", error);
-      }
-    };
-
-    getProducts();
-  }, []);
-
+function ProductsPage() {
   return (
     <div className="main-container">
       <Header />
@@ -37,30 +22,12 @@ const ProductsPage = () => {
               Agregar producto
             </a>
           </div>
-          <Table striped bordered hover className="TablaProductos">
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>Precio</th>
-                <th>Stock</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {products.map((product) => (
-                <tr key={product.id}>
-                  <td>{product.name}</td>
-                  <td>${product.price}</td>
-                  <td>{product.stock}</td>
-                  <td><a href="#">Edit</a></td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
+          <ProductTable />
         </div>
       </div>
+      <Footer />
     </div>
   );
-};
+}
 
 export default ProductsPage;

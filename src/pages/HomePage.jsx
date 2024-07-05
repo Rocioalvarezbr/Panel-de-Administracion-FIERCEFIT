@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import SideMenu from "../components/SideMenu";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
         <SideMenu />
         <div className="home-content"></div>
       </div>
+      <Footer />
     </div>
   );
 }
