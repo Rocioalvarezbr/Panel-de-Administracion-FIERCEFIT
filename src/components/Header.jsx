@@ -10,10 +10,10 @@ function Header() {
           <i className="bi bi-list fs-3 me-4"></i>
           <img src={logo} alt="FierceFIT Logo" />
         </div>
-        <h2 className="title fst-italic">Panel de Control</h2>
+        <h2 id="panel-title" className="title fst-italic">Panel de Control</h2>
         <div>
-          <Link to="/login">
-            <h2>Iniciar Sesion</h2>
+          <Link to="/login" className="login-link">
+            <h2 className="login-title">Iniciar Sesión</h2>
           </Link>
         </div>
       </header>

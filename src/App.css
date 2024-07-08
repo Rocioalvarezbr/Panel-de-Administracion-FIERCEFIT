@@ -59,7 +59,8 @@ body,
 }
 
 .products-content,
-.home-content {
+.home-content,
+.users-content {
   background-color: rgb(207, 206, 206);
   flex-grow: 1;
   min-height: 100%;
@@ -97,17 +98,20 @@ body,
   transform: translateX(-50%);
 }
 
-#agregar-productos {
+#agregar-productos,
+#agregar-usuarios {
   background-color: #daff03;
   border: none;
   color: black;
   font-weight: bold;
 }
 
-.TablaProductos {
+.TablaProductos,
+.TablaUsuarios {
   margin: 30px;
   width: 95%;
 }
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -152,6 +156,7 @@ body,
 .footer-right a:hover {
   color: #d5e703;
 }
+
 .login-page-container {
   background-image: url(../src/img/man-running-treadmill.jpg);
   background-position: center center;
@@ -216,4 +221,20 @@ body,
 
 .login-options {
   margin-top: 15px;
+}
+.login-link {
+  text-decoration: none; 
+  color: inherit; 
+ 
+}
+
+.login-link h2 {
+  margin: 0; 
+}
+.login-title{
+  font-size: 1rem !important;
+}
+#panel-title{
+  color: #daff03;
+  font-size: 1.5rem;
 }

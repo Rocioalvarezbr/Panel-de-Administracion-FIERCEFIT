@@ -14,8 +14,7 @@ const UsersPage = () => {
           method: "GET",
           headers: {
             accept: "application/json",
-            Authorization:
-              "Bearer ${token}",
+            Authorization: `Bearer ${token}`,
           },
         });
         const data = await response.json();
@@ -60,9 +59,9 @@ const UsersPage = () => {
                 <tr key={user.id}>
                   <td>{user.id}</td>
                   <td>
-                    {user.firstname} {user.lastname}{" "}
+                    {user.firstname} {user.lastname}
                   </td>
-                  <td>${user.email}</td>
+                  <td>{user.email}</td>
                   <td>
                     <a href="#">Edit</a>
                   </td>
